@@ -1,0 +1,18 @@
+#maze-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+#title {
+	font-family: "Handjet";
+	font-weight: bold;
+	font-size: 4em;
+	text-align: center;
+	color: #d8584f;
+	text-shadow: 2px 2px 0px #959988;
+}
+
+canvas {
+
+}
