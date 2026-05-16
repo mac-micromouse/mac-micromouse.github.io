@@ -11,6 +11,7 @@ h2 {
 	font-family: "Handjet", sans-serif;
 	font-weight: bold;
 	font-size: 4em;
+	margin-bottom: 20px;
 }
 
 #nav-bar {
@@ -109,6 +110,7 @@ canvas {
 #about-section {
 	position: relative;
 	margin: 230px 10%;
+	margin-bottom: 40px;
 }
 
 #about-section h2 {
@@ -185,4 +187,87 @@ canvas {
 	height: 330px;
 	top: 60px;
 	right: -220px
+}
+
+#graphic-2 {
+	position: absolute;
+	z-index: -1;
+	right: 5px;
+	width: 22%;
+}
+
+#competition-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 200px;
+}
+
+#competition-main {
+	display: flex;
+	justify-content: space-between;
+	background-color: #d8584f;
+	width: 60%;
+	border-radius: 20px;
+}
+#competition-main p {
+	color: white;
+	margin: 38px 30px;
+}
+
+#competition-date,
+#competition-location {
+	background-color: #323032;
+	margin: 24px 0;
+	border-radius: 20px;
+}
+
+#competition-date {
+	width: 40%;
+	margin-left: 24px;
+	margin-right: 12px;
+
+}
+
+#competition-location {
+	width: 60%;
+	margin-left: 12px;
+	margin-right: 24px;
+}
+
+#competition-text {
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 20px 0px;
+}
+
+#competition-buttons {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+#competition-subtext {
+	margin-top: 20px;
+	width: 900px;
+	text-align: center;
+}
+
+#graphic-3-container {
+	position: relative;
+}
+
+#graphic-3 {
+	position: absolute;
+	z-index: -1;
+	top: -340px;
+	left: -20px;
+	width: 22%;
+}
+
+#socials {
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+	margin-top: 30px;
 }
