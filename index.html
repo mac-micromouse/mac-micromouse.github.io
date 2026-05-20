@@ -10,6 +10,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 	</head>
 	<body>
 		<div id="nav-bar">
@@ -22,21 +23,99 @@
 				<p>About</p>
 				<p>Register</p>
 			</div>
+			<span class="fa-solid fa-bars"></span>
 		</div>
-		<img id="landing-img" src="./img/graphic_1.svg" alt="">
-		<div id="landing">
-			<div id="landing-content">
-				<h1 id="title">McMaster Micromouse</h1>
-				<p>Design, build, and program autonomous robots that can explore and solve
-					mazes on their own!
-				</p>
-				<div>
-					<a id="button" href="">Learn More</a>
-					<a id="button" href="">Register</a>
+		<div id="main">
+			<img id="landing-img" src="./img/graphic_1.svg" alt="">
+			<div id="landing">
+				<div id="landing-content">
+					<h1 id="title">McMaster Micromouse</h1>
+					<p>
+						Design, build, and program autonomous robots that can explore and solve
+						mazes on their own!
+					</p>
+					<div id="landing-buttons">
+						<a class="button" href="">Learn More</a>
+						<a class="button" href="">Register</a>
+					</div>
+				</div>
+				<div id="maze-container">
+					<canvas id="maze"></canvas>
 				</div>
 			</div>
-			<div id="maze-container">
-				<canvas id="maze"></canvas>
+			<div id="about-section">
+				<h2>About</h2>
+				<div id="about-bg"></div>
+				<div id="about-content">
+					<div id="about-text">
+						<p>
+							Originally started by IEEE in the late 1970s, Micromouse is a robotics competition 
+							where tiny robots race through a maze completely on their own. Teams design, build, 
+							and program their robots to explore the maze and find the fastest route to the center 
+							as quick as possible.
+							<br><br>
+							McMaster Micromouse hosts workshops and help-sessions leading to a competition, 
+							allowing students to gain experience from embedded systems to pathfinding algorithms.
+							<br><br>
+							All levels of experience are welcomed! 
+							<br><br>
+						</p>
+					</div>
+					<div id="about-imgs">
+						<div id="about-img1">
+							<img src="./img/placeholder1-unsplash.jpg" alt="">
+						</div>
+						<div id="about-img2">
+							<img src="./img/placeholder2-unsplash.jpg" alt="">
+						</div>
+						<div id="about-img3">
+							<img src="./img/placeholder3-unsplash.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<img id="graphic-2" src="./img/graphic_2.svg" alt="">
+			<div id="competition-section">
+				<h2>Competition</h2>
+				<div id="competition-main">
+					<div id="competition-date">
+						<p id="competition-heading">DATE & TIME</p>
+						<p id="competition-text">TBD</p>
+						<p id="competition-subtitle">@ --</p>
+					</div>
+					<div id="competition-location">
+						<p id="competition-heading">LOCATION</p>
+						<p id="competition-text">TBD</p>
+						<p id="competition-subtitle">--</p>
+					</div>
+				</div>
+				<div id="competition-buttons">
+					<a class="button" href="">Rules</a>
+					<a class="button" href="">Register</a>
+				</div>
+				<div id="competition-subtext">
+					<p>
+						Keep up with our socials to get updates. Feel free 
+						to contact us at any time if you have any questions!
+					</p>
+				</div>
+			</div>
+			<div id="graphic-3-container">
+				<img id="graphic-3" src="./img/graphic_3.svg" alt="">
+			</div>
+			<div id="socials">
+				<a href="" >
+					<span class="fa-brands fa-linkedin">
+				</a>
+				<a href="">
+					<span class="fa-brands fa-discord">
+				</a>
+				<a href="">
+					<span class="fa-brands fa-instagram">
+				</a>
+			</div>
+			<div id="temp">
+				<p>More Coming Soon...</p>
 			</div>
 		</div>
 	</body>
