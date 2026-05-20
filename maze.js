@@ -15,6 +15,7 @@ class Maze {
 		const numCells = Math.floor(availablePx / cellSize / 2) * 2;
 
 		if (numCells !== this.grid.length) {
+			this.done = false;
 			this.create();
 		}
 	}
