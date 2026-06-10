@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	overflow-x: hidden;
 }
 
@@ -20,9 +20,12 @@ p {
 	font-size: 1.4em;
 }
 
-h2 {
+h2, #title {
 	font-family: "Handjet", sans-serif;
 	font-weight: bold;
+}
+
+h2 {
 	font-size: 4em;
 	margin-bottom: 20px;
 }
@@ -37,7 +40,6 @@ h2 {
 	padding: 0px max(4vw, 30px);
 	height: 80px;
 	width: 100%;
-	max-width: 100vw;
 	background-color: rgba(255, 255, 255, 0.88);
 }
 
@@ -58,7 +60,7 @@ img, svg {
 
 #logo p {
 	width: 100px;
-	margin: 0px;
+	margin: 0;
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #d8584f;
@@ -97,12 +99,10 @@ img, svg {
 }
 
 #title {
-	font-family: "Handjet", sans-serif;
-	font-weight: bold;
 	font-size: 5.8em;
 	color: #d8584f;
 	text-shadow: 2px 2px 0px #959988;
-	margin: 0px;
+	margin: 0;
 	width: 60%;
 }
 
@@ -126,12 +126,17 @@ img, svg {
 	width: 60%;
 }
 
-#landing-img {
+#landing-img,
+#graphic-2,
+#graphic-3 {
 	position: absolute;
 	z-index: -1;
+	width: 22%;
+}
+
+#landing-img {
 	top: 100px;
 	right: 5px;
-	width: 22%;
 }
 
 .button {
@@ -206,48 +211,42 @@ img, svg {
 }
 
 #about-img1 img,
-#about-img2 img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transform: scale(1.2);
-	object-position: center;
-}
-
+#about-img2 img,
 #about-img3 img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transform: scale(1);
 	object-position: center;
+}
+
+#about-img1 img,
+#about-img2 img {
+	transform: scale(1.2);
+}
+
+#about-img3 img {
+	transform: scale(1);
 }
 
 #about-img1 {
 	width: 260px;
 	height: 300px;
 	top: -70px;
-	right: 60px
+	right: 60px;
 }
 
 #about-img2 {
 	width: 340px;
 	height: 250px;
 	bottom: -60px;
-	right: 60px
+	right: 60px;
 }
 
 #about-img3 {
 	width: 260px;
 	height: 330px;
 	top: 60px;
-	right: -220px
-}
-
-#graphic-2 {
-	position: absolute;
-	z-index: -1;
-	right: 5px;
-	width: 22%;
+	right: -220px;
 }
 
 #competition-section {
@@ -294,7 +293,7 @@ img, svg {
 #competition-text {
 	font-size: 2.5em;
 	font-weight: bold;
-	padding: 20px 0px;
+	padding: 20px 0;
 }
 
 #competition-buttons {
@@ -313,11 +312,8 @@ img, svg {
 }
 
 #graphic-3 {
-	position: absolute;
-	z-index: -1;
 	top: -340px;
 	left: -22px;
-	width: 22%;
 }
 
 #socials {
@@ -353,21 +349,21 @@ img, svg {
 		width: 250px;
 		height: 280px;
 		top: -50px;
-		right: 80px
+		right: 80px;
 	}
 
 	#about-img2 {
 		width: 300px;
 		height: 220px;
 		bottom: -20px;
-		right: 80px
+		right: 80px;
 	}
 
 	#about-img3 {
 		width: 220px;
 		height: 280px;
 		top: 100px;
-		right: -160px
+		right: -160px;
 	}
 
 	#about-text {
@@ -385,26 +381,26 @@ img, svg {
 	}
 }
 
-@media screen and (max-width: 1251px) {
+@media screen and (max-width: 1251px) and (min-width: 1000px) {
 	#about-img1 {
 		width: 220px;
 		height: 260px;
 		top: -80px;
-		right: 100px
+		right: 100px;
 	}
 
 	#about-img2 {
 		width: 280px;
 		height: 200px;
 		bottom: 50px;
-		right: -60px
+		right: -60px;
 	}
 
 	#about-img3 {
 		width: 200px;
 		height: 250px;
 		top: 420px;
-		right: 80px
+		right: 80px;
 	}
 }
 
@@ -518,26 +514,9 @@ img, svg {
 	}
 
 	#about-imgs {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		height: 200px;
-		margin: 0; 
-		margin-top: 50px;
-		gap: 10px;
-		position: initial;
-	}
-
-	#about-img1,
-	#about-img2,
-	#about-img3 {
 		position: relative;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		width: 30%;
-		height: 100%;
+		left: calc(50% - 300px);
+		margin: 90px 0 50px 0;
 	}
 	
 	#competition-section {
