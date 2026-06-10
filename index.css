@@ -171,19 +171,17 @@ img, svg {
 	margin: 0;
 }
 
-#about-bg {
-	position: absolute;
-	height: 450px;
-	width: 100%;
-	background-color: #FFE9E7;
-	z-index: -1;
-	border-radius: 20px;
-	bottom: 40px;
-	left: -18px;
-}
-
 #about-content {
 	display: flex;
+	background-color: #FFE9E7;
+	border-radius: 20px;
+	padding: 25px 0;
+	max-width: calc(90% + 20px);
+}
+
+#about-content-container {
+	display: flex;
+	justify-content: center;
 }
 
 #about-text {
@@ -192,9 +190,11 @@ img, svg {
 }
 
 #about-imgs {
-	position: relative;
+	position: absolute;
 	width: 400px;
 	height: 450px;
+	top: 0;
+	left: calc(100% - 500px);
 }
 
 #about-img1,
@@ -276,13 +276,13 @@ img, svg {
 	background-color: #323032;
 	margin: 24px 0;
 	border-radius: 20px;
+	max-width: calc(90% + 20px);
 }
 
 #competition-date {
 	width: 40%;
 	margin-left: 24px;
 	margin-right: 12px;
-
 }
 
 #competition-location {
@@ -373,11 +373,6 @@ img, svg {
 	#about-text {
 		width: 50%;
 	}
-
-	#about-bg {
-		height: 500px;
-		bottom: -20px;
-	}
 }
 
 @media screen and (max-width: 1385px) {
@@ -385,18 +380,12 @@ img, svg {
 		top: 28px;
 	}
 
-	#about-bg {
-		height: 560px;
-		bottom: -20px;
+	#about-imgs {
+		left: calc(100% - 400px);
 	}
 }
 
 @media screen and (max-width: 1251px) {
-	#about-bg {
-		height: 560px;
-		bottom: 0px;
-	}
-
 	#about-img1 {
 		width: 220px;
 		height: 260px;
@@ -424,15 +413,6 @@ img, svg {
 		display: none;
 	}
 
-	#about-bg {
-		height: 660px;
-		bottom: 0px;
-	}
-
-	#about-imgs {
-		width: 320px;
-	}
-
 	#maze-container {
 		margin-left: 80px;
 	}
@@ -449,7 +429,6 @@ img, svg {
 
 	#nav-bar-content,
 	#landing-img,
-	#about-bg,
 	#graphic-2,
 	#graphic-3 {
 		display: none;
@@ -546,6 +525,7 @@ img, svg {
 		margin: 0; 
 		margin-top: 50px;
 		gap: 10px;
+		position: initial;
 	}
 
 	#about-img1,
@@ -569,6 +549,7 @@ img, svg {
 		flex-direction: column;
 		width: 100%;
 		gap: 20px;
+		align-items: center;
 	}
 
 	#competition-date,

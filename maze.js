@@ -124,13 +124,13 @@ class Maze {
 		}
 
 		if (this.done) {
-			this.current.explored = 3;
 			this.render();
 
 			if (!this.current.prev || (this.current.x === 0 && this.current.y === 0)) {
 				return;
 			}
-
+			
+			this.current.explored = 3;
 			this.current = this.current.prev;
 			window.setTimeout(this.step.bind(this), 50);
 			return;
