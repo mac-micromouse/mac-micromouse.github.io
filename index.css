@@ -32,6 +32,7 @@ h2 {
 
 #main {
 	padding: 0px 15px;
+	overflow: hidden;
 }
 
 #nav-bar {
@@ -122,8 +123,13 @@ img, svg {
 
 #landing-content p {
 	font-size: 1.6em;
-	margin-bottom: 70px;
+	margin-bottom: 40px;
 	width: 60%;
+}
+
+#landing-buttons, #competition-buttons {
+	gap: 10px;
+	display: flex;
 }
 
 #landing-img,
@@ -149,7 +155,6 @@ img, svg {
 	background-color: #d8584f;
 	color: white;
 	border-radius: 4px;
-	margin-right: 18px;
 	box-shadow: 2px 2px 0px #959988;
 	position: relative;
 	user-select: none;
@@ -438,8 +443,7 @@ img, svg {
 	}
 
 	#nav-bar {
-		margin: 24px 0;
-		height: 70px;
+		display: none;
 	}
 
 	#nav-bar span {
@@ -472,7 +476,7 @@ img, svg {
 		order: 3;
 		font-size: 1.2em;
 		text-align: center;
-		margin-bottom: 20px;
+		margin: 0;
 	}
 
 	#title {
@@ -496,7 +500,7 @@ img, svg {
 
 	#about-section {
 		margin: 0;
-		padding-top: 80px;
+		padding-top: 30px;
 	}
 
 	#about-section h2 {
@@ -547,7 +551,7 @@ img, svg {
 	}
 
 	#competition-subtext {
-		width: 100%;
+		width: 80%;
 	}
 
 	#temp p {
