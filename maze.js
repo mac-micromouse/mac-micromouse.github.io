@@ -9,24 +9,26 @@ class Maze {
 		this.done = false;
 	}
 
-	onResize() {
-		const cellSize = 50 / (window.devicePixelRatio >= 2 ? 1.5 : 1);
-		const availablePx = Math.min(window.innerWidth * 0.8, 800);
-		const numCells = Math.floor(availablePx / cellSize / 2) * 2;
+	onResize(create=true) {
+		this.cellSize = 50 / (window.devicePixelRatio >= 2 ? 1.5 : 1);
+		canvas.width = Math.min(0.75 * window.innerWidth, 800, canvas.parentElement.clientWidth);
+		const numCells = Math.floor(canvas.width / this.cellSize / 2) * 2;
+		canvas.width = numCells * this.cellSize + 11;
+		canvas.height = canvas.width;
 
-		if (numCells !== this.grid.length) {
+		canvas.style.display = numCells < 5 ? "none" : "initial";
+
+		if (numCells !== this.grid.length && create) {
 			this.done = false;
 			this.create();
+		} else {
+			this.render();
 		}
 	}
 
 	create() {
 		this.grid = [];
-		this.cellSize = 50 / (window.devicePixelRatio > 1 ? 1.5 : 1);
-		const availablePx = Math.min(window.innerWidth * 0.8, 800);
-		const numCells = Math.floor(availablePx / this.cellSize / 2) * 2;
-
-		canvas.width = canvas.height = numCells * this.cellSize + 11;
+		const numCells = Math.floor(canvas.width / this.cellSize / 2) * 2;
 
 		for (let x = 0; x < numCells; x++) {
 			this.grid.push([]);
@@ -232,5 +234,5 @@ function startAnimation() {
 	ctx = canvas.getContext("2d");
 
 	maze = new Maze();
-	maze.create();
+	maze.onResize();
 }
