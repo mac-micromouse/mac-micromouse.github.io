@@ -32,7 +32,7 @@ h2 {
 
 #main {
 	padding: 0px 15px;
-	overflow: hidden;
+	overflow-x: clip;
 }
 
 #nav-bar {
