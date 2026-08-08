@@ -40,9 +40,14 @@ h2 {
 	font-size: 1.1em;
 }
 
-.member-position {
+.member-position, 
+.member-program {
 	margin: 0;
-	font-size: 1.1em;
+	font-size: 1em;
+}
+
+.member-program {
+	color: rgb(100,100,100);
 }
 
 @media screen and (max-width: 950px) {
