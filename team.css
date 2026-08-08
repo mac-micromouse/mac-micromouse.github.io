@@ -1,0 +1,64 @@
+h2 {
+	text-align: center;
+}
+
+#year{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+#year p{
+	background-color: #d8584f;
+	color: white;
+	padding: 4px 15px;
+	border-radius: 10px;
+	margin:0;
+}
+
+#team-photos {
+	margin: 50px;
+	margin-inline: auto;
+	padding-inline: 50px;
+	display: grid;	
+	grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+	gap: 70px;
+	max-width: 1200px;
+}
+
+.member img {
+	width: 100%;
+	aspect-ratio: 1/1;
+	border-radius: 0px 20px 0px 20px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.member-name {
+	font-weight: bold;
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.member-position, 
+.member-program {
+	margin: 0;
+	font-size: 1em;
+}
+
+.member-program {
+	color: rgb(100,100,100);
+}
+
+@media screen and (max-width: 950px) {
+	#team-photos {
+		grid-template-columns:repeat(3, 1fr);
+		gap: 20px
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#team-photos {
+		grid-template-columns:repeat(2, 1fr);
+	}
+}
