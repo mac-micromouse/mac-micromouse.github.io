@@ -28,6 +28,7 @@ h2, #title {
 h2 {
 	font-size: 4em;
 	margin-bottom: 20px;
+	margin-top: 0;
 }
 
 #main {
@@ -173,6 +174,10 @@ img, svg {
 	width: 22%;
 }
 
+#graphic-2 {
+	right: 0;
+}
+
 #landing-img {
 	top: 100px;
 	right: 5px;
@@ -292,7 +297,7 @@ img, svg {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 200px;
+	margin-top: 80px;
 }
 
 #competition-main {
@@ -350,7 +355,7 @@ img, svg {
 }
 
 #graphic-3 {
-	top: -340px;
+	top: -500px;
 	left: -22px;
 }
 
@@ -358,28 +363,13 @@ img, svg {
 	display: flex;
 	gap: 30px;
 	justify-content: center;
-	margin-top: 30px;
+	margin: 30px 0;
 }
 
 #socials span {
 	text-decoration: none;
 	color: #d8584f;
 	font-size: 3em;
-}
-
-#temp {
-	display: flex;
-	justify-content: center;
-}
-
-#temp p {
-	background-color: #d8584f;
-	border-radius: 20px;
-	padding: 30px 100px;
-	text-align: center;
-	margin-top: 100px;
-	color: white;
-	font-weight: bold;
 }
 
 @media screen and (max-width: 1650px) {
@@ -683,9 +673,5 @@ img, svg {
 
 	#competition-subtext {
 		width: 80%;
-	}
-
-	#temp p {
-		margin-top: 80px;
 	}
 }
