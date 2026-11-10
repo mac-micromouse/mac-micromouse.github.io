@@ -16,10 +16,10 @@
 	</head>
 	<body>
 		<div id="nav-bar">
-			<div id="logo">
-				<img src="./img/logo_dark_no_text.svg" alt="logo">
+			<a href="/" id="logo">
+				<img src="/img/logo_dark_no_text.svg" alt="logo">
 				<p>McMaster Micromouse</p>
-			</div>
+			</a>
 			<div id="nav-bar-content">
 				<a href="/">Home</a>
 				<a href="#about-anchor">About</a>
@@ -27,7 +27,9 @@
 				<a href="/team">Execs</a>
 				<a href="#competition-section">Register</a>
 			</div>
-			<span class="fa-solid fa-bars hamburger"></span>
+			<button class="hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+				<span class="fa-solid fa-bars"></span>
+			</button>
 		</div>
 		<div id="main">
 			<img id="landing-img" src="./img/graphic_1.svg" alt="">

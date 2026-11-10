@@ -1,7 +1,9 @@
 let canvas, ctx, maze;
 
 window.addEventListener("load", startAnimation);
-window.addEventListener("resize", () => maze.onResize());
+window.addEventListener("resize", () => {
+	if (maze) maze.onResize();
+});
 
 class Maze {
 	constructor() {
@@ -231,6 +233,7 @@ class Maze {
 
 function startAnimation() {
 	canvas = document.getElementById("maze");
+	if (!canvas) return;
 	ctx = canvas.getContext("2d");
 
 	maze = new Maze();

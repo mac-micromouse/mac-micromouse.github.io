@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/index.css">
 		<link rel="stylesheet" href="team.css">
 		<title>Team | McMaster Micromouse</title>
-		<script src="/js/maze.js"></script>
+		<script src="/js/index.js" defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
 	</head>
 	<body>
 		<div id="nav-bar">
-			<div id="logo">
+			<a href="/" id="logo">
 				<img src="/img/logo_dark_no_text.svg" alt="logo">
 				<p>McMaster Micromouse</p>
-			</div>
+			</a>
 			<div id="nav-bar-content">
 				<a href="/">Home</a>
 				<a href="/#about-anchor">About</a>
@@ -26,7 +26,9 @@
 				<a href="/team">Execs</a>
 				<a href="/#competition-section">Register</a>
 			</div>
-			<span class="fa-solid fa-bars hamburger"></span>
+			<button class="hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+				<span class="fa-solid fa-bars"></span>
+			</button>
 		</div>
 		<div id="main">
 			<h2>Meet the Team</h2>

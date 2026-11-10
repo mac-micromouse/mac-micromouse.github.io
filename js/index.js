@@ -1,4 +1,69 @@
-// McMaster Micromouse - News & Articles Manager
+// McMaster Micromouse - Navigation & News Manager
+
+function initNavbar() {
+	const hamburgerBtn = document.querySelector(".hamburger");
+	const navContent = document.getElementById("nav-bar-content");
+	const navBar = document.getElementById("nav-bar");
+
+	if (!hamburgerBtn || !navContent) return;
+
+	function toggleNav(forceState) {
+		const isOpen = forceState !== undefined ? forceState : !navContent.classList.contains("active");
+		if (isOpen) {
+			navContent.classList.add("active");
+			if (navBar) navBar.classList.add("menu-open");
+			hamburgerBtn.setAttribute("aria-expanded", "true");
+			const icon = hamburgerBtn.querySelector("i, span") || (hamburgerBtn.classList.contains("fa-solid") ? hamburgerBtn : null);
+			if (icon) {
+				icon.classList.remove("fa-bars");
+				icon.classList.add("fa-xmark");
+			}
+		} else {
+			navContent.classList.remove("active");
+			if (navBar) navBar.classList.remove("menu-open");
+			hamburgerBtn.setAttribute("aria-expanded", "false");
+			const icon = hamburgerBtn.querySelector("i, span") || (hamburgerBtn.classList.contains("fa-solid") ? hamburgerBtn : null);
+			if (icon) {
+				icon.classList.remove("fa-xmark");
+				icon.classList.add("fa-bars");
+			}
+		}
+	}
+
+	hamburgerBtn.addEventListener("click", (e) => {
+		e.stopPropagation();
+		toggleNav();
+	});
+
+	// Close menu when a navigation link is clicked
+	const navLinks = navContent.querySelectorAll("a");
+	navLinks.forEach((link) => {
+		link.addEventListener("click", () => {
+			toggleNav(false);
+		});
+	});
+
+	// Close menu when clicking outside of the navbar
+	document.addEventListener("click", (e) => {
+		if (navBar && !navBar.contains(e.target)) {
+			toggleNav(false);
+		}
+	});
+
+	// Close on Escape key press
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") {
+			toggleNav(false);
+		}
+	});
+
+	// Close menu if viewport resized to desktop breakpoint
+	window.addEventListener("resize", () => {
+		if (window.innerWidth > 1000) {
+			toggleNav(false);
+		}
+	});
+}
 
 function formatDate(dateStr) {
 	if (!dateStr) return "";
@@ -258,8 +323,10 @@ async function loadArticles() {
 
 if (document.readyState === "loading") {
 	document.addEventListener("DOMContentLoaded", () => {
+		initNavbar();
 		loadArticles();
 	});
 } else {
+	initNavbar();
 	loadArticles();
 }
