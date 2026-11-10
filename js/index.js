@@ -131,7 +131,7 @@ function renderCards(articles, container, isHomePage) {
 				<h3 class="news-card-title">${article.title}</h3>
 				<p class="news-card-snippet">${article.content || ""}</p>
 				<span class="news-card-cta">
-					Read More <i class="fa-solid fa-arrow-right"></i>
+					Read more <i class="fa-solid fa-arrow-right"></i>
 				</span>
 			</div>
 		`;
@@ -198,7 +198,7 @@ function openArticle(articleId, updateHistory = true) {
 			<button class="article-back-btn" id="article-footer-back-btn">
 				${backLabel}
 			</button>
-			${!isNewsPage ? `<a class="button article-all-news-btn" href="/news">View All News</a>` : ""}
+			${!isNewsPage ? `<a class="button article-all-news-btn" href="/news">View all news</a>` : ""}
 		</div>
 	`;
 
