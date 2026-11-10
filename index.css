@@ -209,6 +209,7 @@ img, svg {
 	top: -100px;
 }
 
+/* ── About ──────────────────────────────────────────── */
 #about-section {
 	position: relative;
 	margin: 230px 10%;
@@ -221,7 +222,6 @@ img, svg {
 
 #about-content {
 	display: flex;
-	background-color: #FFE9E7;
 	border-radius: 20px;
 	padding: 25px 0;
 	max-width: calc(90% + 20px);
@@ -235,6 +235,10 @@ img, svg {
 #about-text {
 	margin-left: 40px;
 	width: 58%;
+}
+
+#about-text p {
+	color: #3a3838;
 }
 
 #about-imgs {
@@ -292,6 +296,95 @@ img, svg {
 	right: -220px;
 }
 
+
+
+/* ── Topics grid ────────────────────────────────────── */
+#topics-section {
+	margin: 0 max(6vw, 40px);
+}
+
+#topics-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+	width: 100%;
+	max-width: 1200px;
+	margin-top: 10px;
+}
+
+.topic-card {
+	border: 1px solid #e8e4e3;
+	border-radius: 14px;
+	padding: 28px 24px;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.topic-card:hover {
+	box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+	border-color: rgba(216, 88, 79, 0.35);
+}
+
+.topic-icon {
+	font-size: 1.8em;
+	color: #d8584f;
+	display: block;
+	margin-bottom: 14px;
+}
+
+.topic-card h3 {
+	font-family: Inter, sans-serif;
+	font-size: 1.1em;
+	font-weight: 700;
+	margin: 0 0 8px;
+	color: #232121;
+}
+
+.topic-card p {
+	font-size: 0.95em;
+	color: #555;
+	margin: 0;
+	line-height: 1.6;
+}
+
+/* ── CTA strip ──────────────────────────────────────── */
+#cta-strip {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	margin: 80px max(6vw, 40px) 0;
+	background-color: #232121;
+	border-radius: 20px;
+	padding: 48px 56px;
+}
+
+#cta-text h2 {
+	color: white;
+	margin: 0 0 10px;
+}
+
+#cta-text p {
+	color: rgba(255,255,255,0.7);
+	margin: 0;
+	font-size: 1.15em;
+}
+
+#cta-buttons {
+	display: flex;
+	gap: 14px;
+	flex-shrink: 0;
+}
+
+#cta-buttons .button-outline {
+	border-color: rgba(255,255,255,0.4);
+	color: white;
+}
+
+#cta-buttons .button-outline:hover {
+	background-color: rgba(255,255,255,0.1);
+	color: white;
+}
+
 .section {
 	display: flex;
 	flex-direction: column;
@@ -333,10 +426,22 @@ img, svg {
 	margin-right: 24px;
 }
 
-#competition-text {
+.competition-text {
 	font-size: 2.5em;
 	font-weight: bold;
 	padding: 20px 0;
+}
+
+.competition-heading {
+	font-size: 1.4em;
+	opacity: 0.75;
+	margin: 38px 30px 0;
+}
+
+.competition-subtitle {
+	font-size: 1.1em;
+	opacity: 0.6;
+	margin: 0 30px 38px;
 }
 
 #competition-buttons {
@@ -359,18 +464,105 @@ img, svg {
 	left: -22px;
 }
 
-#socials {
-	display: flex;
-	gap: 30px;
-	justify-content: center;
-	margin: 30px 0;
+.button-outline {
+	background-color: transparent;
+	color: #d8584f;
+	border: 2px solid #d8584f;
+	box-shadow: 2px 2px 0px #959988;
 }
 
-#socials span {
-	text-decoration: none;
-	color: #d8584f;
-	font-size: 3em;
+.button-outline:hover {
+	background-color: #d8584f;
+	color: white;
 }
+
+.button-disabled {
+	opacity: 0.45;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+/* ── Footer ───────────────────────────────────────── */
+#site-footer {
+	border-top: 1px solid #e8e4e3;
+	padding: 40px max(4vw, 30px) 24px;
+	margin-top: 60px;
+}
+
+#footer-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin-bottom: 28px;
+}
+
+#footer-brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#footer-brand img {
+	height: 36px;
+	width: auto;
+}
+
+#footer-brand span {
+	font-family: Inter, sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+	color: #d8584f;
+}
+
+#footer-links {
+	display: flex;
+	gap: 28px;
+	flex-wrap: wrap;
+}
+
+#footer-links a {
+	font-family: Inter, sans-serif;
+	font-size: 0.95em;
+	color: #555;
+	text-decoration: none;
+	transition: color 0.15s;
+}
+
+#footer-links a:hover {
+	color: #d8584f;
+}
+
+#footer-socials {
+	display: flex;
+	gap: 18px;
+}
+
+#footer-socials a {
+	color: #d8584f;
+	font-size: 1.5em;
+	transition: transform 0.15s, color 0.15s;
+	text-decoration: none;
+}
+
+#footer-socials a:hover {
+	transform: translateY(-3px);
+}
+
+#footer-copy {
+	font-family: Inter, sans-serif;
+	font-size: 0.82em;
+	color: #aaa;
+	text-align: center;
+	margin: 0;
+}
+
+/* remove old socials section since footer now has them */
+#socials {
+	display: none;
+}
+
 
 @media screen and (max-width: 1650px) {
 	#about-img1 {
@@ -459,7 +651,6 @@ img, svg {
 
 	.button {
 		font-size: 1.4em;
-		width: 150px;
 		align-content: center;
 		text-align: center;
 	}
@@ -634,7 +825,6 @@ img, svg {
 		width: 98%;
 		padding: 10px 20px;
 		border-radius: 20px;
-		background-color: #FFE9E7;
 		box-sizing: border-box;
 	}
 
@@ -642,6 +832,32 @@ img, svg {
 		position: relative;
 		left: calc(50% - 300px);
 		margin: 90px 0 50px 0;
+	}
+
+	#topics-section {
+		margin: 40px 20px;
+	}
+
+	#topics-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+	}
+
+	#cta-strip {
+		flex-direction: column;
+		text-align: center;
+		padding: 36px 24px;
+		margin: 60px 20px 0;
+	}
+
+	#cta-buttons {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	#cta-buttons .button-outline {
+		border-color: rgba(255,255,255,0.4);
+		color: white;
 	}
 	
 	#competition-section {
@@ -666,12 +882,28 @@ img, svg {
 		margin: 24px 30px;
 	}
 
-	#competition-text {
+	.competition-text {
 		font-size: 1.4em;
 		padding: 0;
 	}
 
 	#competition-subtext {
 		width: 80%;
+	}
+
+	#footer-inner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	#footer-links {
+		gap: 16px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#topics-grid {
+		grid-template-columns: 1fr;
 	}
 }

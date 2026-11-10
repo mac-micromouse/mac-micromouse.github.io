@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
+		<meta name="description" content="McMaster Micromouse news and events.">
 		<link rel="stylesheet" href="/index.css">
 		<link rel="stylesheet" href="/news/news.css">
-		<title>News & Events | McMaster Micromouse</title>
+		<title>News &amp; Events | McMaster Micromouse</title>
 		<script src="/js/index.js" defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 	<body>
 		<div id="nav-bar">
 			<a href="/" id="logo">
-				<img src="/img/logo_dark_no_text.svg" alt="logo">
+				<img src="/img/logo_dark_no_text.svg" alt="McMaster Micromouse logo">
 				<p>McMaster Micromouse</p>
 			</a>
 			<div id="nav-bar-content">
@@ -38,17 +39,33 @@
 					<div id="article-view" class="article-view" style="display: none;"></div>
 				</div>
 			</div>
-			<div id="socials">
-				<a target="_blank" href="https://www.linkedin.com/company/mcmaster-micromouse">
-					<span class="fa-brands fa-linkedin"></span>
-				</a>
-				<a target="_blank" href="https://discord.gg/UtMJkznhNa">
-					<span class="fa-brands fa-discord"></span>
-				</a>
-				<a target="_blank" href="https://www.instagram.com/macmicromouse">
-					<span class="fa-brands fa-instagram"></span>
-				</a>
-			</div>
+			<footer id="site-footer">
+				<div id="footer-inner">
+					<div id="footer-brand">
+						<img src="/img/logo_dark_no_text.svg" alt="McMaster Micromouse logo">
+						<span>McMaster Micromouse</span>
+					</div>
+					<nav id="footer-links" aria-label="Footer navigation">
+						<a href="/">Home</a>
+						<a href="/#about-anchor">About</a>
+						<a href="/news">News</a>
+						<a href="/team">Execs</a>
+						<a href="/#competition-section">Register</a>
+					</nav>
+					<div id="footer-socials">
+						<a target="_blank" href="https://www.linkedin.com/company/mcmaster-micromouse" aria-label="LinkedIn">
+							<span class="fa-brands fa-linkedin"></span>
+						</a>
+						<a target="_blank" href="https://discord.gg/UtMJkznhNa" aria-label="Discord">
+							<span class="fa-brands fa-discord"></span>
+						</a>
+						<a target="_blank" href="https://www.instagram.com/macmicromouse" aria-label="Instagram">
+							<span class="fa-brands fa-instagram"></span>
+						</a>
+					</div>
+				</div>
+				<p id="footer-copy">&copy; 2027 McMaster Micromouse. All rights reserved.</p>
+			</footer>
 		</div>
 	</body>
 </html>
