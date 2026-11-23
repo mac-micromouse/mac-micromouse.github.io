@@ -2,8 +2,8 @@
 	{
 		"title": "Micromouse x Mars Rover Hardware Workshop",
 		"date": "2026-11-20",
-		"content": "Micromouse is excited to announce that we'll be hosting a workshop focusing on hardware, in collaroration with McMaster Mars Rover Team! This workshop will take place on November 20th, 6:30 to 8:30 pm, in Thode Makerspace.",
-		"img_file": "/img/news/hardware_workshop.png"
+		"content": "The \"Build Your Own Space Control System\" workshop hosted with McMaster Mars Rover was nothing less than a huge success! \n\nWe took a trip into the future and were tasked with a critical mission - With the clock ticking, restore the monitoring and navigation system of a Mars reconnaissance rover.\n\nParticipants learned about ESP32, various sensors, and other electronic components in order to take on the challenge of designing and assembling an electronic system capable of detecting obstacles, assessing its surrounding, and responding to its environment.\n\nCouldn't attend the workshop? Not to worry! Slides and instructions are posted on our discord server if you'd like to try it at home. \n\nComing up: Micromouse team registration and kit purchasing now available!",
+		"img_file": "/img/news/hardware_workshop.webp"
 	},
 	{
 		"title": "Micromouse hosts its first workshop",
