@@ -321,12 +321,72 @@ async function loadArticles() {
 	}
 }
 
+function initGalleryLightbox() {
+	const lightbox = document.getElementById("gallery-lightbox");
+	const lightboxImg = document.getElementById("gallery-lightbox-img");
+	const closeBtn = document.getElementById("gallery-lightbox-close");
+	const prevBtn = document.getElementById("gallery-lightbox-prev");
+	const nextBtn = document.getElementById("gallery-lightbox-next");
+	const items = Array.from(document.querySelectorAll("#gallery-grid .gallery-item"));
+
+	if (!lightbox || !lightboxImg || items.length === 0) return;
+
+	let currentIndex = 0;
+
+	function showImage(index) {
+		currentIndex = (index + items.length) % items.length;
+		const img = items[currentIndex].querySelector("img");
+		if (!img) return;
+		lightboxImg.src = img.src;
+		lightboxImg.alt = img.alt;
+	}
+
+	function openLightbox(index) {
+		showImage(index);
+		lightbox.hidden = false;
+		requestAnimationFrame(() => {
+			lightbox.classList.add("open");
+		});
+		document.body.style.overflow = "hidden";
+	}
+
+	function closeLightbox() {
+		lightbox.classList.remove("open");
+		lightbox.hidden = true;
+		lightboxImg.src = "";
+		document.body.style.overflow = "";
+	}
+
+	items.forEach((item, index) => {
+		item.addEventListener("click", () => openLightbox(index));
+	});
+
+	if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+	if (prevBtn) prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+	if (nextBtn) nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+
+	lightbox.addEventListener("click", (e) => {
+		if (e.target === lightbox || e.target.classList.contains("gallery-lightbox-content")) {
+			closeLightbox();
+		}
+	});
+
+	document.addEventListener("keydown", (e) => {
+		if (lightbox.hidden) return;
+		if (e.key === "Escape") closeLightbox();
+		else if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+		else if (e.key === "ArrowRight") showImage(currentIndex + 1);
+	});
+}
+
 if (document.readyState === "loading") {
 	document.addEventListener("DOMContentLoaded", () => {
 		initNavbar();
 		loadArticles();
+		initGalleryLightbox();
 	});
 } else {
 	initNavbar();
 	loadArticles();
+	initGalleryLightbox();
 }

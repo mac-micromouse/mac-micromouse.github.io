@@ -141,6 +141,34 @@
 				</div>
 			</div>
 
+			<!-- ── Gallery ──────────────────────────────────── -->
+			<div class="section" id="gallery-section">
+				<h2>Gallery</h2>
+				<div id="gallery-grid">
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 1">
+						<img src="/img/gallery/horizontal1.webp" alt="McMaster Micromouse gallery photo 1" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 2">
+						<img src="/img/gallery/horizontal2.webp" alt="McMaster Micromouse gallery photo 2" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 3">
+						<img src="/img/gallery/horizontal3.webp" alt="McMaster Micromouse gallery photo 3" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 4">
+						<img src="/img/gallery/vertical1.webp" alt="McMaster Micromouse gallery photo 4" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 5">
+						<img src="/img/gallery/horizontal4.webp" alt="McMaster Micromouse gallery photo 5" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 6">
+						<img src="/img/gallery/horizontal5.webp" alt="McMaster Micromouse gallery photo 6" loading="lazy">
+					</button>
+					<button type="button" class="gallery-item" aria-label="Enlarge gallery image 7">
+						<img src="/img/gallery/vertical2.webp" alt="McMaster Micromouse gallery photo 7" loading="lazy">
+					</button>
+				</div>
+			</div>
+
 			<!-- ── Get involved CTA ──────────────────────────── -->
 			<div id="cta-strip">
 				<div id="cta-text">
@@ -212,6 +240,22 @@
 				</div>
 				<p id="footer-copy">&copy; 2027 McMaster Micromouse. All rights reserved.</p>
 			</footer>
+		</div>
+
+		<!-- ── Gallery Lightbox ─────────────────────────── -->
+		<div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged gallery image" hidden>
+			<button type="button" class="gallery-lightbox-close" id="gallery-lightbox-close" aria-label="Close enlarged image">
+				<span class="fa-solid fa-xmark"></span>
+			</button>
+			<button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" id="gallery-lightbox-prev" aria-label="Previous image">
+				<span class="fa-solid fa-chevron-left"></span>
+			</button>
+			<div class="gallery-lightbox-content">
+				<img id="gallery-lightbox-img" src="" alt="">
+			</div>
+			<button type="button" class="gallery-lightbox-nav gallery-lightbox-next" id="gallery-lightbox-next" aria-label="Next image">
+				<span class="fa-solid fa-chevron-right"></span>
+			</button>
 		</div>
 	</body>
 </html>
