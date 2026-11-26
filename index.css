@@ -125,6 +125,26 @@ img, svg {
 	border-bottom: 2px solid black;
 }
 
+#nav-bar-content a.nav-register {
+	background-color: #d8584f;
+	color: white;
+	padding: 8px 18px;
+	border-radius: 4px;
+	border-bottom: none;
+	box-shadow: 2px 2px 0px #959988;
+	transition: background-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+#nav-bar-content a.nav-register:hover {
+	background-color: #c44a42;
+	border-bottom: none;
+}
+
+#nav-bar-content a.nav-register:active {
+	box-shadow: none;
+	transform: translate(2px, 2px);
+}
+
 #maze-container {
 	width: 40%;
 	margin-left: 130px;
@@ -927,6 +947,20 @@ img, svg {
 		background-color: #FFE9E7;
 		color: #d8584f;
 		padding-left: 36px;
+	}
+
+	#nav-bar-content a.nav-register {
+		margin: 8px 28px 4px;
+		padding: 12px 20px;
+		justify-content: center;
+		color: white;
+	}
+
+	#nav-bar-content a.nav-register:hover,
+	#nav-bar-content a.nav-register:active {
+		background-color: #c44a42;
+		color: white;
+		padding-left: 20px;
 	}
 
 	#about-section,
