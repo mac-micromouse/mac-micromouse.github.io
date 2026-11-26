@@ -393,6 +393,48 @@ img, svg {
 	margin-top: 80px;
 }
 
+#simulator-section {
+	margin: 80px 10%;
+}
+
+#simulator-content {
+	display: flex;
+	align-items: center;
+	gap: 48px;
+	max-width: 1100px;
+	width: 100%;
+	margin-top: 24px;
+}
+
+#simulator-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	border-left: 4px solid #d8584f;
+	padding-left: 24px;
+}
+
+#simulator-text p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: #3a3838;
+}
+
+#simulator-img {
+	flex: 1.2;
+}
+
+#simulator-img img {
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	display: block;
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16), 8px 8px 0 #d8584f;
+}
+
 #competition-main {
 	display: flex;
 	justify-content: space-between;
@@ -836,6 +878,22 @@ img, svg {
 
 	#topics-section {
 		margin: 40px 20px;
+	}
+
+	#simulator-section {
+		margin: 40px 20px;
+	}
+
+	#simulator-content {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	#simulator-text {
+		align-items: center;
+		text-align: center;
+		border-left: none;
+		padding-left: 0;
 	}
 
 	#topics-grid {
